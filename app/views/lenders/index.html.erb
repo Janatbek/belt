@@ -1,0 +1,58 @@
+<a href="sessions/logout" id="logout">Logout</a>
+
+<p>Name: John Oliver Rosales</p>
+<p>Account Balance: <b>$10, 000</b></p>
+
+<h4>List of people in need of help:</h4>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Need Money for</th>
+			<th>Reason for loan</th>
+			<th>Amount Needed</th>
+			<th>Amount Raised</th>
+			<th>Action</th>
+		</tr>
+<% @lenders.each do |lender|  %>
+		<tr class="for_border">
+			<td><%= lender.first_name + lender.last_name %></td>
+			<td>Boutique Business</td>
+			<td> I am in need of help for my bfdj</td>
+			<td>$ 4 000</td>
+			<td>$350</td>
+			<td><form action="lenders/lend" method="post">
+			<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+			<input type="number" name="number" placeholder="$25" id="inline">
+				<button>Lend</button>
+			</form></td>
+		</tr>
+<% end %>
+	</table>
+
+	<h4>List of people you lend money to:</h4>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Need Money for</th>
+			<th>Reason for loan</th>
+			<th>Amount Needed</th>
+			<th>Amount Raised</th>
+			<th>Amount Lent</th>
+		</tr>
+		<tr class="for_border">
+			<td>Marat</td>
+			<td>Boutique Business</td>
+			<td> I am in need of help for my bfdj</td>
+			<td>$ 4 000</td>
+			<td>$350</td>
+			<td>$35</td>
+		</tr>
+		<tr class="for_border">
+			<td>Erik</td>
+			<td>Fishery Business</td>
+			<td> I am in need of help for my bfdj</td>
+			<td>$ 2 000</td>
+			<td>$300</td>
+			<td>$25</td>
+		</tr>
+	</table>

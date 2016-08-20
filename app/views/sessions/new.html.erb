@@ -1,0 +1,85 @@
+
+<div id="container">
+	<h1>Welcome</h1>
+	
+	<form action="sessions/register_lender" method="post" id="lender">
+		<fieldset>
+			<legend>Lender</legend>
+			<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+			<p>
+				<label>First Name</label>
+				<input type="text" name="first_name" id="name">
+			</p>
+			<p>
+				<label>Last Name</label>
+				<input type="text" name="last_name" id="username">
+			</p>
+			<p>
+				<label>Email</label>
+				<input type="text" name="email">
+			</p>
+			<p>
+				<label>Password</label>
+				<input type="password" name="password">
+			</p>
+			<p>
+				<label>Password Confirm</label>
+				<input type="password" name="pc">
+			</p>
+			<p>
+				<label>Money</label>
+				<input type="number" name="money" placeholder="$100">
+			</p>
+			<p>
+				<button>Register</button>
+			</p>
+			<a href="/online_landing/sessions/login">Already a member?</a>
+			
+		</fieldset>
+	</form>
+
+	<form action="sessions/register_borrower" method="post" id="borrower">
+		<fieldset>
+			<legend>Borrower</legend>
+			<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+			<p>
+				<label>First Name:</label>
+				<input type="text" name="first_name">
+			</p>
+			<p>
+				<label>Last Name:</label>
+				<input type="text" name="last_name">
+			</p>
+			<p>
+				<label>Email:</label>
+				<input type="text" name="email">
+			</p>
+			<p>
+				<label>Password:</label>
+				<input type="password" name="password">
+			</p>
+			<p>
+				<label>Password Confirm</label>
+				<input type="password" name="pc">
+			</p>
+			<p>
+				<label> Need Money For:</label>
+				<input type="text" name="purpose">
+			</p>
+			<p>
+				<label>Description:</label>
+				<textarea rows="4" cols="50" name="description">
+				</textarea>
+
+			</p>
+			<p>
+				<label> Amount Needed:</label>
+				<input type="number" name="money" placeholder="$5000">
+			</p>
+			<p>
+				<button>Register</button>
+			</p>
+			<a href="/online_landing/sessions/login">Already a member?</a>
+			
+		</fieldset>
+	</form>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BeltPrep</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <style type="text/css">
+  #inline{width: 50px;}
+	#lender{ width: 350px; display: inline-block;}
+	#borrower{ width: 300px; display: inline-block; margin-left: 100px; vertical-align: top;}
+	label{display:inline-block; width: 130px;} 
+	#logout{float: right;}
+	table {
+		width: 800px;
+    	border-collapse: collapse;
+    	border:1px solid black;
+	}
+	table, th, td {
+    	border-right: 1px solid black;
+    	height: 30px;
+    	padding-left: 5px;
+    	margin-bottom: 20px;
+	}
+	td {
+		max-width: 120px;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	  white-space: nowrap;
+	}
+	th {background: #CCC}
+	tr:nth-child(even) {background: seashell}
+	tr:nth-child(odd) {background: #FFF}'
+</style>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
