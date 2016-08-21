@@ -2,33 +2,33 @@
 <div id="container">
 	<h1>Welcome</h1>
 	
-	<form action="sessions/register_lender" method="post" id="lender">
+	<form action="register_lender" method="post" id="lender">
 		<fieldset>
 			<legend>Lender</legend>
 			<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 			<p>
 				<label>First Name</label>
-				<input type="text" name="first_name" id="name">
+				<input type="text" name="lender[first_name]">
 			</p>
 			<p>
 				<label>Last Name</label>
-				<input type="text" name="last_name" id="username">
+				<input type="text" name="lender[last_name]">
 			</p>
 			<p>
 				<label>Email</label>
-				<input type="text" name="email">
+				<input type="text" name="lender[email]">
 			</p>
 			<p>
 				<label>Password</label>
-				<input type="password" name="password">
+				<input type="password" name="lender[password]">
 			</p>
 			<p>
 				<label>Password Confirm</label>
-				<input type="password" name="pc">
+				<input type="password" name="lender[password_confirmation]">
 			</p>
 			<p>
 				<label>Money</label>
-				<input type="number" name="money" placeholder="$100">
+				<input type="number" name="lender[money]" placeholder="$100">
 			</p>
 			<p>
 				<button>Register</button>
@@ -38,7 +38,7 @@
 		</fieldset>
 	</form>
 
-	<form action="sessions/register_borrower" method="post" id="borrower">
+	<form action="register_borrower" method="post" id="borrower">
 		<fieldset>
 			<legend>Borrower</legend>
 			<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">

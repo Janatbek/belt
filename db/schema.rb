@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160819180358) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.string   "password"
+    t.string   "password_digest"
     t.integer  "money"
     t.string   "purpose"
     t.string   "description"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20160819180358) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.string   "password"
+    t.string   "password_digest"
     t.integer  "money"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

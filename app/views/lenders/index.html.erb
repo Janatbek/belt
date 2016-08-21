@@ -1,6 +1,6 @@
 <a href="sessions/logout" id="logout">Logout</a>
 
-<p>Name: John Oliver Rosales</p>
+<p>Name: <%= @lender.first_name %></p>
 <p>Account Balance: <b>$10, 000</b></p>
 
 <h4>List of people in need of help:</h4>
@@ -13,9 +13,9 @@
 			<th>Amount Raised</th>
 			<th>Action</th>
 		</tr>
-<% @lenders.each do |lender|  %>
+<% @lender.each do |x|  %>
 		<tr class="for_border">
-			<td><%= lender.first_name + lender.last_name %></td>
+			<td><%= x.last_name%></td>
 			<td>Boutique Business</td>
 			<td> I am in need of help for my bfdj</td>
 			<td>$ 4 000</td>

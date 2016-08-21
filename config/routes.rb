@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  get 'online_landing/check_user' => 'sessions#check_user'
   get 'online_landing/borrower' => 'borrowers#index'
   get 'online_landing/lender' => 'lenders#index'
+  get 'lenders/index' => 'lenders#index'
   get 'online_landing/register' => 'sessions#new'
-  get 'online_landing/sessions/login' => 'sessions#login'
-  post 'online_landing/sessions/register_lender' => 'sessions#register_lender'
-  post 'online_landing/sessions/register_borrower' => 'sessions#register_borrower'
+  get 'online_landing/login' => 'sessions#login'
+  post 'online_landing/register_lender' => 'sessions#register_lender'
+  post 'online_landing/register_borrower' => 'sessions#register_borrower'
   post 'online_landing/lenders/lend' => 'lenders#lend'
   get 'online_landing/sessions/logout' => 'sessions#logout'
 
